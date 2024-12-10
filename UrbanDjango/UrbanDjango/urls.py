@@ -1,3 +1,4 @@
+
 """
 URL configuration for UrbanDjango project.
 
@@ -16,7 +17,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from UrbanDjango.task2.views import index, index2
+from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', index),
+    path('index/', index2.as_view())
 ]
